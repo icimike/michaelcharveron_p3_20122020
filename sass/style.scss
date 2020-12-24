@@ -6,7 +6,8 @@ $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
 $color-bck: grey;
 $border: 1px solid black;
-$shadow: 0 0.2rem 0.6rem lighten($color-bck, 10%);
+$shadow: 0 0.8rem 1rem lighten($color-bck, 40%);
+$shadowHover : 0 0.2rem 0.3rem $color-bck;
 
 @mixin border {
   border: $border;
@@ -22,10 +23,14 @@ $shadow: 0 0.2rem 0.6rem lighten($color-bck, 10%);
   border-radius: 2rem;
   border: none;
   background: linear-gradient(170deg, $color-secondary, $color-primary);
-  box-shadow: $shadow;
+  box-shadow: 0 0.8rem 1rem lighten($color-bck, 30%);
   color: white;
   font: 1rem "Roboto";
   cursor: pointer;
+  &:hover {
+    box-shadow: $shadowHover;
+    transition: 0.5s;
+  }
   &:focus {
     outline: none;
   }
@@ -38,7 +43,6 @@ img {
 
 a {
   text-decoration: none;
-  color: white;
 }
 
 body {
@@ -52,6 +56,13 @@ header {
   align-items: center;
   width: 100%;
   height: 4rem;
+  .title__arrow a {
+    font-size: 1.5rem;
+    color: black;
+    top: 1.1rem;
+    margin-left: 2rem;
+    position: absolute;
+  }
   .title {
     margin: auto;
     font-family: "Shrikhand", "Sans serif";
@@ -113,6 +124,7 @@ header {
 
 .howTo__btn {
   padding: 1.5rem 0 1.5rem 2rem;
+  margin-bottom: 1rem;
   width: 100%;
   border-radius: 1.5rem;
   box-shadow: $shadow;
@@ -121,6 +133,8 @@ header {
   cursor: pointer;
   &:hover {
     background-color: lighten($color-primary, 35%);
+    transition: 0.8s;
+    box-shadow: $shadowHover;
     .howTo__icon {
       color: $color-primary;
     }
@@ -147,11 +161,11 @@ header {
   font-weight: 500;
 }
 
-.beside {
+#beside {
   display: flex;
   flex-direction: column;
   width: auto;
-  &__title {
+  .beside__title {
     @include title;
   }
 }
@@ -165,12 +179,20 @@ header {
   border-radius: 1.25rem;
   box-shadow: $shadow;
   cursor: pointer;
+  &:hover {
+    box-shadow: $shadowHover;
+    transition: 0.5s;
+  }
   &__view {
     border-radius: 1.25rem 1.25rem 0 0;
     object-fit: cover;
     width: 100%;
     height: 13rem;
   }
+  &__link {
+    color: black;
+  }
+  
 }
 
 .thumbnail__new {
@@ -233,6 +255,10 @@ footer {
   padding: 1rem 0 2rem 1rem;
 }
 
+.footer__link {
+  color: white;
+}
+
 .footer__title {
   margin-left: 1rem;
   font-family: "Shrikhand", "Sans serif";
@@ -253,12 +279,6 @@ footer {
 }
 
 /* Mise en forme PAGES */
-
-.title__icon a {
-  @include border;
-  font-size: 1.5rem;
-  color: black;
-}
 
 .image__title {
   width: auto;
@@ -295,9 +315,10 @@ footer {
 
 .main__course {
   text-transform: uppercase;
-  margin: 0 1rem 0rem 1rem;
+  margin: 2rem 1rem 0rem 1rem;
   padding-bottom: 0.2rem;
   font-size: 1.2rem;
+  
 }
 
 .main__trait {
@@ -313,10 +334,14 @@ footer {
   display: flex;
   flex-direction: column;
   background-color: white;
-  margin: 0 1rem 1rem 1rem;
+  margin: 0 1rem 1.3rem 1rem;
   border-radius: 1rem;
   box-shadow: $shadow;
   cursor: pointer;
+  &:hover {
+    box-shadow: $shadowHover;
+    transition: 0.5s;
+  }
 }
 
 .main__title {
@@ -350,4 +375,51 @@ footer {
     padding: 1rem 3rem 1rem 3rem;
     margin: 3rem 0 3rem 0;
   }
+}
+
+/* HEART */
+.thumbnail__heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.heart__full .fa-heart {
+  background: linear-gradient(170deg, $color-secondary, $color-primary);
+  -webkit-background-clip: text;
+  color: transparent;
+  
+}
+
+.thumbnail__heart-empty {
+  background-color: white;
+  color: gray;
+  position: absolute;
+  cursor: pointer;
+  &:hover {
+    background-color: transparent;
+    color: transparent;
+    transition: 1.5s;
+  } 
+}
+
+.heart__empty {
+  background-color: lighten($color-bck, 46%);
+  color: gray;
+  position: absolute;
+  cursor: pointer;
+  &:hover {
+    background-color: transparent;
+    color: transparent;
+    transition: 1.5s;
+  } 
 }
