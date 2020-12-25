@@ -273,7 +273,7 @@ footer {
   height: 20rem;
 }
 
-.menu {
+.menu__main {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -294,6 +294,19 @@ footer {
   font-size: 2rem;
 }
 
+.main {
+  animation: course 2s forwards;
+}
+
+@keyframes course {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .main__course {
   text-transform: uppercase;
   margin: 2rem 1rem 0rem 1rem;
@@ -416,7 +429,6 @@ footer {
   transition: 1.5s;
 }
 
-/* TEST */
 .loader {
   position: absolute;
   background-color: white;
@@ -501,6 +513,97 @@ footer {
 .loader__end {
   opacity: 0;
   transition: opacity 0.4s ease-out;
+}
+
+/* TEST */
+.menu {
+  margin: 2rem 0 0 0;
+}
+
+.menu h4 {
+  margin-left: 2rem;
+  font-weight: 200;
+}
+.menu h4::after {
+  display: block;
+  content: "";
+  height: 0.2rem;
+  width: 2.5rem;
+  background: #99e2d0;
+}
+.menu .menu-card {
+  cursor: pointer;
+  background-color: white;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem;
+  display: flex;
+}
+.menu .menu-card:hover .check {
+  width: 25%;
+}
+.menu .menu-card:hover .check > .fa-check-circle {
+  opacity: 1;
+  animation: rotation 0.4s linear;
+}
+.menu .choice {
+  width: 100%;
+  padding: 0 10px;
+  display: grid;
+  grid-template-rows: 30px;
+  grid-template-columns: auto auto;
+  grid-template-areas: "text1 ." "text2 price";
+}
+.menu .choice p {
+  display: block;
+}
+.menu .choice p:nth-child(1) {
+  grid-area: text1;
+  font-weight: 700;
+}
+.menu .choice p:nth-child(2) {
+  grid-area: text2;
+  font-weight: 200;
+}
+.menu .choice p:nth-child(3) {
+  grid-area: price;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.check {
+  transition: width 0.4s linear;
+  width: 0;
+  right: 0;
+  background-color: #99e2d0;
+  color: white;
+  border-radius: 0 12px 12px 0;
+  cursor: pointer;
+  justify-content: center;
+  transform-origin: right center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.check .fa-check-circle {
+  overflow: hidden;
+  font-size: 1.5rem;
+}
+
+@keyframes rotation {
+  from {
+    z-index: 1;
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  to {
+    z-index: 1;
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
