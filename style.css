@@ -102,6 +102,21 @@ header .title {
   margin: 1rem 1.5rem 1.5rem 1.5rem;
 }
 
+@media screen and (min-width: 768px) {
+  .aside__title {
+    display: flex;
+    justify-content: center;
+  }
+
+  .howTo__bloc {
+    display: flex;
+    justify-content: center;
+  }
+
+  .howTo {
+    width: 20rem;
+  }
+}
 .howTo__btn {
   padding: 1.5rem 0 1.5rem 2rem;
   width: 100%;
@@ -234,6 +249,23 @@ header .title {
   transition: 0.8s;
 }
 
+@media screen and (min-width: 768px) {
+  #beside {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .beside__title {
+    width: 100rem;
+    text-align: center;
+  }
+
+  .thumbnail {
+    max-width: 40%;
+  }
+}
+/* FOOTER */
 footer {
   display: flex;
   flex-direction: column;
@@ -300,6 +332,21 @@ footer .footer__link {
   font-size: 1.7rem;
 }
 
+.menu-card {
+  animation: course 1.5s forwards;
+}
+
+@keyframes course {
+  from {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
 .menu h4 {
   margin: 2.5rem 1.5rem -0.3rem 1.5rem;
   font-size: 1.1rem;
@@ -315,7 +362,6 @@ footer .footer__link {
   background: #99e2d0;
 }
 .menu .menu-card {
-  max-width: 30rem;
   cursor: pointer;
   background-color: white;
   position: relative;
@@ -422,7 +468,6 @@ footer .footer__link {
   outline: none;
 }
 
-/* HEART */
 .thumbnail__heart {
   display: flex;
   align-items: center;
@@ -477,7 +522,7 @@ footer .footer__link {
   align-items: center;
   justify-content: center;
   z-index: 2;
-  animation: loading 4s forwards;
+  animation: loading 3s forwards;
   pointer-events: none;
 }
 
@@ -547,11 +592,6 @@ footer .footer__link {
 
 .letter:nth-child(8) {
   animation-delay: 0.8s;
-}
-
-.loader__end {
-  opacity: 0;
-  transition: opacity 0.4s ease-out;
 }
 
 /*# sourceMappingURL=style.css.map */

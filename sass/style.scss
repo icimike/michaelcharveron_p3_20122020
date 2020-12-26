@@ -46,7 +46,6 @@ a {
 }
 
 body {
-  // @include border;
   // max-width: 375px;
   font-family: "Roboto", "sans serif";
   margin: 0;
@@ -125,6 +124,20 @@ header {
   margin: 1rem 1.5rem 1.5rem 1.5rem;
 }
 
+@media screen and (min-width: 768px) {
+  .aside__title {
+    display: flex;
+    justify-content: center;
+  }
+  .howTo__bloc {
+    display: flex;
+    justify-content: center;
+  }
+  .howTo {
+    width: 20rem;
+  }
+}
+
 .howTo__btn {
   padding: 1.5rem 0 1.5rem 2rem;
   width: 100%;
@@ -152,7 +165,6 @@ header {
   font-size: 1rem;
 }
 
-
 .howTo__number {
   display: flex;
   justify-content: center;
@@ -166,7 +178,6 @@ header {
   color: white;
   margin-right: -1rem;
 }
-
 
 #beside {
   display: flex;
@@ -199,7 +210,6 @@ header {
   &__link {
     color: black;
   }
-  
 }
 
 .thumbnail__new {
@@ -257,6 +267,21 @@ header {
   }
 }
 
+@media screen and (min-width: 768px) {
+  #beside {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .beside__title {
+    width: 100rem;
+    text-align: center;
+  }
+  .thumbnail {
+    max-width: 40%;
+  }
+}
+/* FOOTER */
 footer {
   display: flex;
   flex-direction: column;
@@ -290,7 +315,6 @@ footer {
 }
 
 /* Mise en forme PAGES */
-
 .image__title {
   width: auto;
   height: 19rem;
@@ -324,20 +348,21 @@ footer {
   }
 }
 
-// .main {
-//   @include border;
-//   animation: course 2s forwards;
-// }
+.menu-card {
+  animation: course 1.5s forwards;
+}
 
-// @keyframes course {
-//   0% {
-//     opacity: 0;
-//     transform: scaleY(0);
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
+@keyframes course {
+  from {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
 
 .menu {
   h4 {
@@ -355,7 +380,7 @@ footer {
         }
     }
   .menu-card {
-    max-width: 30rem;
+    // max-width: 30rem;
     cursor: pointer;
     background-color: white;
     position: relative;
@@ -407,7 +432,7 @@ footer {
       }
     }
 }
-// check 
+
 .check {
   transition: width 0.4s linear;
   width: 0;
@@ -424,12 +449,8 @@ footer {
   .fa-check-circle {
     overflow: hidden;
     font-size: 1.5rem;
-     //opacity: 0;
-    //z-index: 1;
-    //width: 0;
   }
 }
-
 
 @keyframes rotation {
   from {
@@ -443,9 +464,6 @@ footer {
   }
 }
 
-
-
-
 .btn__order {
   display: flex;
   justify-content: center;
@@ -456,7 +474,6 @@ footer {
   }
 }
 
-/* HEART */
 .thumbnail__heart {
   display: flex;
   align-items: center;
@@ -512,7 +529,7 @@ footer {
   align-items: center;
   justify-content: center;
   z-index: 2;
-  animation: loading 4s forwards;
+  animation: loading 3s forwards;
   pointer-events: none;
 }
 
@@ -580,8 +597,4 @@ footer {
   animation-delay: 0.8s;
 }
 
-.loader__end {
-  opacity : 0;
-  transition: opacity 0.4s ease-out;
-}
 
