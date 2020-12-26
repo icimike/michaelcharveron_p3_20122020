@@ -19,16 +19,17 @@ header {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 4rem;
+  height: 3.8rem;
 }
 header .title__arrow a {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: black;
   top: 1.1rem;
-  margin-left: 2rem;
+  margin-left: 1.5rem;
   position: absolute;
 }
 header .title {
+  font-size: 1.8em;
   margin: auto;
   font-family: "Shrikhand", "Sans serif";
   font-weight: 300;
@@ -91,24 +92,22 @@ header .title {
 .aside__title {
   font-size: 1.5rem;
   font-weight: 700;
-  margin: 3rem 2rem 2rem 2rem;
+  margin: 3rem 1.5rem 2rem 1.5rem;
 }
 
 .howTo {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  margin: 1rem 2rem 1rem 2rem;
+  margin: 1rem 1.5rem 1.5rem 1.5rem;
 }
 
 .howTo__btn {
   padding: 1.5rem 0 1.5rem 2rem;
-  margin-bottom: 1rem;
   width: 100%;
   border-radius: 1.5rem;
   box-shadow: 0 0.8rem 1rem #e6e6e6;
   background-color: whitesmoke;
-  font-size: 1.3rem;
   cursor: pointer;
 }
 .howTo__btn:hover {
@@ -120,26 +119,29 @@ header .title {
   color: #9356dc;
 }
 
+.howTo__icon {
+  font-size: 1.2rem;
+  padding-right: 1rem;
+  color: grey;
+}
+
+.howTo__text {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
 .howTo__number {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 2.3rem;
-  height: 2rem;
+  font-size: 0.9rem;
+  width: 2rem;
+  height: 1.7rem;
   border-radius: 50%;
   background-color: #9356dc;
   color: white;
   margin-right: -1rem;
-}
-
-.howTo__icon {
-  padding-right: 1rem;
-  color: #747474;
-}
-
-.howTo__text {
-  font-weight: 500;
 }
 
 #beside {
@@ -150,15 +152,15 @@ header .title {
 #beside .beside__title {
   font-size: 1.5rem;
   font-weight: 700;
-  margin: 3rem 2rem 2rem 2rem;
+  margin: 3rem 1.5rem 2rem 1.5rem;
 }
 
 .thumbnail {
   display: inline-block;
   position: relative;
   width: auto;
-  height: 18rem;
-  margin: 0 2rem 2rem 2rem;
+  height: 15.4rem;
+  margin: 0 1.5rem 2rem 1.5rem;
   border-radius: 1.25rem;
   box-shadow: 0 0.8rem 1rem #e6e6e6;
   cursor: pointer;
@@ -171,33 +173,34 @@ header .title {
   border-radius: 1.25rem 1.25rem 0 0;
   object-fit: cover;
   width: 100%;
-  height: 13rem;
+  height: 11rem;
 }
 .thumbnail__link {
   color: black;
 }
 
 .thumbnail__new {
-  box-shadow: 0 0.8rem 1rem #e6e6e6;
+  box-shadow: 0 0.2rem 0.3rem grey;
   position: absolute;
   z-index: 1;
-  width: 7rem;
-  height: 1.8rem;
-  padding-top: 0.5rem;
+  width: 6rem;
+  height: 1.6rem;
+  padding-top: 0.4rem;
   right: 0;
   top: 0;
   margin: 1rem 1rem 0 0;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
-  color: #2c9c81;
+  justify-content: center;
+  color: #2a947a;
   background-color: #ade8d9;
 }
 
 .thumbnail__legend {
   display: flex;
   justify-content: space-between;
-  height: 4.7rem;
+  margin-top: 0.4rem;
 }
 
 .thumbnail__text {
@@ -209,7 +212,7 @@ header .title {
 
 .thumbnail__title {
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin: 0;
 }
 
@@ -217,6 +220,7 @@ header .title {
   font-weight: 300;
   font-size: 1rem;
   margin: 0;
+  padding-top: 0.1rem;
 }
 
 .thumbnail__icon {
@@ -236,26 +240,28 @@ footer {
   background-color: #343434;
   padding: 1rem 0 2rem 1rem;
 }
-
-.footer__link {
+footer .footer__title {
+  font-size: 1.3rem;
+  margin-left: 1rem;
+  font-family: "Shrikhand", "Sans serif";
+  font-weight: 200;
+}
+footer .footer__link {
   color: white;
 }
 
-.footer__title {
-  margin-left: 1rem;
-  font-family: "Shrikhand", "Sans serif";
-  font-weight: 400;
-}
-
 .li {
+  font-size: 0.9rem;
   display: flex;
   margin-left: 1rem;
   color: white;
 }
 .li__icon {
-  width: 1rem;
+  font-size: 0.8rem;
+  width: 0.5rem;
 }
 .li__choice {
+  font-size: 0.9rem;
   margin-left: 1rem;
   margin-bottom: 0.5rem;
 }
@@ -263,7 +269,7 @@ footer {
 /* Mise en forme PAGES */
 .image__title {
   width: auto;
-  height: 20rem;
+  height: 19rem;
 }
 
 .image__resto {
@@ -284,82 +290,115 @@ footer {
 
 .menu__title {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  height: 3rem;
+  justify-content: space-between;
+  margin: 2rem 2rem 0 1.5rem;
 }
 .menu__title .menu__resto {
   font-family: "Shrikhand", "Sans serif";
-  font-size: 2rem;
-}
-.menu__title .menu__icon {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
-.main {
-  animation: course 2s forwards;
-}
-
-@keyframes course {
-  0% {
-    opacity: 0;
-    transform: scaleY(0);
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.main__course {
-  text-transform: uppercase;
-  margin: 2rem 1rem 0rem 1rem;
-  padding-bottom: 0.2rem;
-  font-size: 1.2rem;
-}
-
-.main__trait {
-  border: 1px solid black;
-  width: 3rem;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-  background-color: #99e2d0;
-  border: 0.1rem solid #99e2d0;
-}
-
-.main__btn {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  margin: 0 1rem 1.3rem 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 0.8rem 1rem #e6e6e6;
-  cursor: pointer;
-}
-.main__btn:hover {
-  box-shadow: 0 0.2rem 0.3rem grey;
-  transition: 0.5s;
-}
-
-.main__title {
-  margin: 0;
-  padding: 0.5rem;
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-
-.main__info {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 0.5rem;
+.menu h4 {
+  margin: 2.5rem 1.5rem -0.3rem 1.5rem;
   font-size: 1.1rem;
+  font-weight: 300;
+  text-transform: uppercase;
 }
-.main__info .main__subtitle {
-  padding-left: 0.5rem;
-  margin: 0;
+.menu h4::after {
+  display: block;
+  content: "";
+  height: 0.2rem;
+  width: 2.5rem;
+  margin-top: 0.3rem;
+  background: #99e2d0;
 }
-.main__info .main__price {
-  margin: 0;
-  padding-right: 1.5rem;
-  font-weight: 600;
+.menu .menu-card {
+  max-width: 30rem;
+  cursor: pointer;
+  background-color: white;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 0.8rem 1rem #e6e6e6;
+  margin: 1.2rem;
+  display: flex;
+}
+.menu .menu-card:hover .check {
+  width: 25%;
+}
+.menu .menu-card:hover .check > .fa-check-circle {
+  opacity: 1;
+  animation: rotation 0.4s linear;
+}
+.menu .choice {
+  width: 100%;
+  padding: 0 0.8rem;
+  display: grid;
+  grid-template-rows: 1.7rem;
+  grid-template-columns: auto auto;
+  grid-template-areas: "dish ." "side price";
+}
+.menu .choice p {
+  display: block;
+}
+.menu .choice p:nth-child(1) {
+  max-width: 10rem;
+  grid-area: dish;
+  font-weight: 700;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+.menu .choice p:nth-child(2) {
+  max-width: 20rem;
+  grid-area: side;
+  font-weight: 200;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu .choice p:nth-child(3) {
+  grid-area: price;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding-left: 1rem;
+  display: flex;
+  justify-content: flex-end;
 }
 
+.check {
+  transition: width 0.4s linear;
+  width: 0;
+  right: 0;
+  background-color: #99e2d0;
+  color: white;
+  border-radius: 0 12px 12px 0;
+  cursor: pointer;
+  justify-content: center;
+  transform-origin: right center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.check .fa-check-circle {
+  overflow: hidden;
+  font-size: 1.5rem;
+}
+
+@keyframes rotation {
+  from {
+    z-index: 1;
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  to {
+    z-index: 1;
+    transform: rotate(360deg);
+  }
+}
 .btn__order {
   display: flex;
   justify-content: center;
@@ -396,7 +435,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .heart__full .fa-heart {
@@ -513,97 +552,6 @@ footer {
 .loader__end {
   opacity: 0;
   transition: opacity 0.4s ease-out;
-}
-
-/* TEST */
-.menu {
-  margin: 2rem 0 0 0;
-}
-
-.menu h4 {
-  margin-left: 2rem;
-  font-weight: 200;
-}
-.menu h4::after {
-  display: block;
-  content: "";
-  height: 0.2rem;
-  width: 2.5rem;
-  background: #99e2d0;
-}
-.menu .menu-card {
-  cursor: pointer;
-  background-color: white;
-  position: relative;
-  border-radius: 12px;
-  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1);
-  margin: 2rem;
-  display: flex;
-}
-.menu .menu-card:hover .check {
-  width: 25%;
-}
-.menu .menu-card:hover .check > .fa-check-circle {
-  opacity: 1;
-  animation: rotation 0.4s linear;
-}
-.menu .choice {
-  width: 100%;
-  padding: 0 10px;
-  display: grid;
-  grid-template-rows: 30px;
-  grid-template-columns: auto auto;
-  grid-template-areas: "text1 ." "text2 price";
-}
-.menu .choice p {
-  display: block;
-}
-.menu .choice p:nth-child(1) {
-  grid-area: text1;
-  font-weight: 700;
-}
-.menu .choice p:nth-child(2) {
-  grid-area: text2;
-  font-weight: 200;
-}
-.menu .choice p:nth-child(3) {
-  grid-area: price;
-  font-weight: 500;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.check {
-  transition: width 0.4s linear;
-  width: 0;
-  right: 0;
-  background-color: #99e2d0;
-  color: white;
-  border-radius: 0 12px 12px 0;
-  cursor: pointer;
-  justify-content: center;
-  transform-origin: right center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.check .fa-check-circle {
-  overflow: hidden;
-  font-size: 1.5rem;
-}
-
-@keyframes rotation {
-  from {
-    z-index: 1;
-    transform: rotate(0);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  to {
-    z-index: 1;
-    transform: rotate(360deg);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

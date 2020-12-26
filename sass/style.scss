@@ -16,7 +16,7 @@ $shadowHover : 0 0.2rem 0.3rem $color-bck;
 @mixin title {
   font-size: 1.5rem;
   font-weight: 700;
-  margin: 3rem 2rem 2rem 2rem;
+  margin: 3rem 1.5rem 2rem 1.5rem;
 }
 
 @mixin btn {
@@ -46,26 +46,27 @@ a {
 }
 
 body {
+  // @include border;
+  // max-width: 375px;
   font-family: "Roboto", "sans serif";
   margin: 0;
   padding: 0;
 }
 
-
-
 header {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 4rem;
+  height: 3.8rem;
   .title__arrow a {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: black;
     top: 1.1rem;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
     position: absolute;
   }
   .title {
+    font-size: 1.8em;
     margin: auto;
     font-family: "Shrikhand", "Sans serif";
     font-weight: 300;
@@ -121,17 +122,15 @@ header {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  margin: 1rem 2rem 1rem 2rem;
+  margin: 1rem 1.5rem 1.5rem 1.5rem;
 }
 
 .howTo__btn {
   padding: 1.5rem 0 1.5rem 2rem;
-  margin-bottom: 1rem;
   width: 100%;
   border-radius: 1.5rem;
   box-shadow: $shadow;
   background-color: lighten($color-bck, 46%);
-  font-size: 1.3rem;
   cursor: pointer;
   &:hover {
     background-color: lighten($color-primary, 35%);
@@ -143,25 +142,31 @@ header {
   }
 }
 
+.howTo__icon {
+  font-size: 1.2rem;
+  padding-right: 1rem;
+  color: $color-bck;
+}
+.howTo__text {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+
 .howTo__number {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 2.3rem;
-  height: 2rem;
+  font-size: 0.9rem;
+  width: 2rem;
+  height: 1.7rem;
   border-radius: 50%;
   background-color: $color-primary;
   color: white;
   margin-right: -1rem;
 }
-.howTo__icon {
-  padding-right: 1rem;
-  color: rgb(116, 116, 116);
-}
-.howTo__text {
-  font-weight: 500;
-}
+
 
 #beside {
   display: flex;
@@ -176,8 +181,8 @@ header {
   display: inline-block;
   position: relative;
   width: auto;
-  height: 18rem;
-  margin: 0 2rem 2rem 2rem;
+  height: 15.4rem;
+  margin: 0 1.5rem 2rem 1.5rem;
   border-radius: 1.25rem;
   box-shadow: $shadow;
   cursor: pointer;
@@ -189,7 +194,7 @@ header {
     border-radius: 1.25rem 1.25rem 0 0;
     object-fit: cover;
     width: 100%;
-    height: 13rem;
+    height: 11rem;
   }
   &__link {
     color: black;
@@ -198,26 +203,27 @@ header {
 }
 
 .thumbnail__new {
-  box-shadow: $shadow;
+  box-shadow: $shadowHover;
   position: absolute;
   z-index: 1;
-  width: 7rem;
-  height: 1.8rem;
-  padding-top: 0.5rem;
+  width: 6rem;
+  height: 1.6rem;
+  padding-top: 0.4rem;
   right: 0;
   top: 0;
   margin: 1rem 1rem 0 0;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
-  color: darken($color-tertiary, 35%);
+  justify-content: center;
+  color: darken($color-tertiary, 37%);
   background-color: lighten($color-tertiary, 5%);
 }
 
 .thumbnail__legend {
   display: flex;
   justify-content: space-between;
-  height: 4.7rem;
+  margin-top: 0.4rem;
 }
 
 .thumbnail__text {
@@ -229,7 +235,7 @@ header {
 
 .thumbnail__title {
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin: 0;
 }
 
@@ -237,6 +243,7 @@ header {
   font-weight: 300;
   font-size: 1rem;
   margin: 0;
+  padding-top: 0.1rem;
 }
 
 .thumbnail__icon {
@@ -255,26 +262,28 @@ footer {
   flex-direction: column;
   background-color: darken($color-bck, 30%);
   padding: 1rem 0 2rem 1rem;
-}
-
-.footer__link {
-  color: white;
-}
-
-.footer__title {
-  margin-left: 1rem;
-  font-family: "Shrikhand", "Sans serif";
-  font-weight: 400;
+  .footer__title {
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    font-family: "Shrikhand", "Sans serif";
+    font-weight: 200;
+  }
+  .footer__link {
+    color: white;
+  }
 }
 
 .li {
+  font-size: 0.9rem;
   display: flex;
   margin-left: 1rem;
   color: white;
   &__icon {
-    width: 1rem;
+    font-size: 0.8rem;
+    width: 0.5rem;
   }
   &__choice {
+    font-size: 0.9rem;
     margin-left: 1rem;
     margin-bottom: .5rem;
   }
@@ -284,7 +293,7 @@ footer {
 
 .image__title {
   width: auto;
-  height: 20rem;
+  height: 19rem;
 }
 
 .image__resto {
@@ -305,84 +314,137 @@ footer {
 
 .menu__title {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  height: 3rem;
+  justify-content: space-between;
+  margin: 2rem 2rem 0 1.5rem;
   .menu__resto {
     font-family: "Shrikhand", "Sans serif";
-    font-size: 2rem;
-  }
-  .menu__icon {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 }
 
+// .main {
+//   @include border;
+//   animation: course 2s forwards;
+// }
 
-.main {
-  animation: course 2s forwards;
-}
+// @keyframes course {
+//   0% {
+//     opacity: 0;
+//     transform: scaleY(0);
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
 
-@keyframes course {
-  0% {
-    opacity: 0;
-    transform: scaleY(0);
+.menu {
+  h4 {
+    margin: 2.5rem 1.5rem -0.3rem 1.5rem;
+    font-size: 1.1rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      &::after {
+          display: block;
+          content: "";
+          height: 0.2rem;
+          width: 2.5rem;
+          margin-top: 0.3rem;
+          background: #99e2d0;
+        }
+    }
+  .menu-card {
+    max-width: 30rem;
+    cursor: pointer;
+    background-color: white;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: $shadow;
+    margin: 1.2rem;
+    display: flex;
+      &:hover .check {
+        width: 25%;
+        > .fa-check-circle {
+        opacity: 1;
+        animation: rotation 0.4s linear;
+      }
+    }
   }
-  100% {
-    opacity: 1;
-  }
+  .choice {
+    width: 100%;
+    padding: 0 0.8rem;
+    display: grid;
+    grid-template-rows: 1.7rem;
+    grid-template-columns: auto auto;
+    grid-template-areas: "dish ." "side price";
+      p {
+        display: block;
+        &:nth-child(1) {
+          max-width: 10rem;
+          grid-area: dish;
+          font-weight: 700;
+          font-size: 1rem;
+          white-space: nowrap;
+        }
+        &:nth-child(2) {
+          max-width: 20rem;
+          grid-area: side;
+          font-weight: 200;
+          font-size: 0.9rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        &:nth-child(3) {
+          grid-area: price;
+          font-weight: 500;
+          font-size: 0.9rem;
+          padding-left: 1rem;
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
 }
-
-.main__course {
-  text-transform: uppercase;
-  margin: 2rem 1rem 0rem 1rem;
-  padding-bottom: 0.2rem;
-  font-size: 1.2rem;
-  
-}
-
-.main__trait {
-  @include border;
-  width: 3rem;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
+// check 
+.check {
+  transition: width 0.4s linear;
+  width: 0;
+  right: 0;
   background-color: $color-tertiary;
-  border: 0.1rem solid $color-tertiary;
-}
-
-.main__btn {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  margin: 0 1rem 1.3rem 1rem;
-  border-radius: 1rem;
-  box-shadow: $shadow;
+  color: white;
+  border-radius: 0 12px 12px 0;
   cursor: pointer;
-  &:hover {
-    box-shadow: $shadowHover;
-    transition: 0.5s;
-  }
-}
-
-.main__title {
-  margin: 0;
-  padding: 0.5rem;
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-
-.main__info {
+  justify-content: center;
+  transform-origin: right center;
   display: flex;
-  justify-content: space-between;
-  padding-bottom: 0.5rem;
-  font-size: 1.1rem;
-  .main__subtitle {
-    padding-left: 0.5rem;
-    margin: 0;
-  }
-  .main__price {
-    margin: 0;
-    padding-right: 1.5rem;
-    font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  .fa-check-circle {
+    overflow: hidden;
+    font-size: 1.5rem;
+     //opacity: 0;
+    //z-index: 1;
+    //width: 0;
   }
 }
+
+
+@keyframes rotation {
+  from {
+      z-index:1;
+      transform: rotate(0);
+  } 50% {
+      transform: rotate(180deg);
+  } to {
+    z-index:1;
+      transform: rotate(360deg);
+  }
+}
+
+
+
 
 .btn__order {
   display: flex;
@@ -407,7 +469,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .heart__full .fa-heart {
@@ -521,106 +583,5 @@ footer {
 .loader__end {
   opacity : 0;
   transition: opacity 0.4s ease-out;
-}
-
-
-/* TEST */
-
-.menu {
-  margin: 2rem 0 0 0;
-}
-
-
-.menu {
-  h4 {
-    margin-left: 2rem;
-      font-weight: 200;
-      &::after {
-          display: block;
-          content: "";
-          height: 0.2rem;
-          width: 2.5rem;
-          background: #99e2d0;
-      }
-  }
-.menu-card {
-  // max-width: 20rem;
-      cursor: pointer;
-      background-color: white;
-      position: relative;
-      border-radius: 12px;
-      box-shadow: 2px 3px 10px rgba(0,0,0,0.1);
-      margin: 2rem;
-      display: flex;
-  &:hover .check {
-    width: 25%;
-    > .fa-check-circle {
-      opacity: 1;
-      animation: rotation 0.4s linear;
-    }
-  }
-}
-  .choice {
-      width: 100%;
-      padding: 0 10px;
-      display: grid;
-      grid-template-rows: 30px;
-      grid-template-columns: auto auto;
-      grid-template-areas: 
-      "text1 ."
-      "text2 price";
-      p {
-          display: block;
-          &:nth-child(1) {
-              grid-area: text1;
-              font-weight: 700;
-          }
-          &:nth-child(2) {
-              grid-area: text2;
-              font-weight: 200;
-          }
-          &:nth-child(3) {
-              grid-area: price;
-              font-weight: 500;
-              display: flex;
-              justify-content: flex-end;
-          }
-      }
-  }
-}
-// check 
-.check {
-  transition: width 0.4s linear;
-  width: 0;
-  right: 0;
-  background-color: $color-tertiary;
-  color: white;
-  border-radius: 0 12px 12px 0;
-  cursor: pointer;
-  justify-content: center;
-  transform-origin: right center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .fa-check-circle {
-    overflow: hidden;
-    font-size: 1.5rem;
-     //opacity: 0;
-    //z-index: 1;
-    //width: 0;
-  }
-}
-
-
-@keyframes rotation {
-  from {
-      z-index:1;
-      transform: rotate(0);
-  } 50% {
-      transform: rotate(180deg);
-  } to {
-    z-index:1;
-      transform: rotate(360deg);
-  }
 }
 
