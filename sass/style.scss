@@ -124,19 +124,7 @@ header {
   margin: 1rem 1.5rem 1.5rem 1.5rem;
 }
 
-@media screen and (min-width: 768px) {
-  .aside__title {
-    display: flex;
-    justify-content: center;
-  }
-  .howTo__bloc {
-    display: flex;
-    justify-content: center;
-  }
-  .howTo {
-    width: 20rem;
-  }
-}
+
 
 .howTo__btn {
   padding: 1.5rem 0 1.5rem 2rem;
@@ -177,6 +165,21 @@ header {
   background-color: $color-primary;
   color: white;
   margin-right: -1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .aside__title {
+    display: flex;
+    justify-content: center;
+  }
+  .howTo__bloc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .howTo {
+    min-width: 20rem;
+  }
 }
 
 #beside {
@@ -380,7 +383,6 @@ footer {
         }
     }
   .menu-card {
-    // max-width: 30rem;
     cursor: pointer;
     background-color: white;
     position: relative;
@@ -431,6 +433,24 @@ footer {
         }
       }
     }
+}
+
+@media screen and (min-width: 768px) {
+  .menu__title {
+    justify-content: center;
+  }
+  .menu__resto {
+    margin-right: 10rem;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .menu-card {
+    min-width: 25rem;
+  }
 }
 
 .check {
