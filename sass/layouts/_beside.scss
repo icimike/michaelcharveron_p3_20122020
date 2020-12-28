@@ -86,7 +86,7 @@
   }
 }
   
-@media screen and (min-width: 768px) {
+@media all and (min-width: 768px) {
   #beside {
     flex-direction: row;
     flex-wrap: wrap;
@@ -97,6 +97,7 @@
     text-align: center;
   }
   .thumbnail {
+    min-width: 25rem;
     max-width: 40%;
   }
 }

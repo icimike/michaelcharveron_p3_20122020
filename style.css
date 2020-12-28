@@ -433,7 +433,7 @@ footer .footer__link {
   transition: 0.8s;
 }
 
-@media screen and (min-width: 768px) {
+@media all and (min-width: 768px) {
   #beside {
     flex-direction: row;
     flex-wrap: wrap;
@@ -446,9 +446,11 @@ footer .footer__link {
   }
 
   .thumbnail {
+    min-width: 25rem;
     max-width: 40%;
   }
 }
+
 .image__title {
   width: auto;
   height: 19rem;
