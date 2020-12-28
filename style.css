@@ -151,6 +151,7 @@ body {
   background: linear-gradient(170deg, #ff79da, #9356dc);
   box-shadow: 0 0.8rem 1rem #cdcdcd;
   color: white;
+  text-align: center;
   font: 1rem "Roboto";
   cursor: pointer;
   padding: 1rem 3rem 1rem 3rem;
@@ -258,6 +259,7 @@ footer .footer__link {
   background: linear-gradient(170deg, #ff79da, #9356dc);
   box-shadow: 0 0.8rem 1rem #cdcdcd;
   color: white;
+  text-align: center;
   font: 1rem "Roboto";
   cursor: pointer;
   padding: 1rem 1.7rem 1rem 1.7rem;
@@ -431,22 +433,21 @@ footer .footer__link {
   transition: 0.8s;
 }
 
-@media screen and (min-width: 768px) {
+@media all and (min-width: 768px) {
   #beside {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }
-
   .beside__title {
     width: 100rem;
     text-align: center;
   }
-
   .thumbnail {
     max-width: 40%;
   }
 }
+
 .image__title {
   width: auto;
   height: 19rem;
@@ -614,4 +615,3 @@ footer .footer__link {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
