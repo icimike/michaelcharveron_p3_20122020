@@ -444,6 +444,7 @@ footer .footer__link {
     text-align: center;
   }
   .thumbnail {
+    min-width: 25rem;
     max-width: 40%;
   }
 }
