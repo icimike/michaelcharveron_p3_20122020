@@ -1,0 +1,31 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: darken($color-bck, 30%);
+  padding: 1rem 0 2rem 1rem;
+  .footer__title {
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    font-family: "Shrikhand", "Sans serif";
+    font-weight: 200;
+  }
+  .footer__link {
+    color: white;
+  }
+}
+  
+.li {
+  font-size: 0.9rem;
+  display: flex;
+  margin-left: 1rem;
+  color: white;
+  &__icon {
+    font-size: 0.8rem;
+    width: 0.5rem;
+  }
+  &__choice {
+    font-size: 0.9rem;
+    margin-left: 1rem;
+    margin-bottom: .5rem;
+  }
+}

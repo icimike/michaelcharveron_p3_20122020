@@ -1,0 +1,27 @@
+@mixin border {
+    border: $border;
+}
+
+@mixin title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 3rem 1.5rem 2rem 1.5rem;
+}
+
+@mixin btn {
+    border-radius: 2rem;
+    border: none;
+    background: linear-gradient(170deg, $color-secondary, $color-primary);
+    box-shadow: 0 0.8rem 1rem lighten($color-bck, 30%);
+    color: white;
+    text-align: center;
+    font: 1rem "Roboto";
+    cursor: pointer;
+  &:hover {
+    box-shadow: $shadowHover;
+    transition: 0.5s;
+  }
+  &:focus {
+    outline: none;
+  }
+}
