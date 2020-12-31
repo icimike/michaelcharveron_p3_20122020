@@ -15,6 +15,11 @@ body {
   padding: 0;
 }
 
+figure {
+  display: inline;
+  margin: 0;
+}
+
 .loader {
   position: absolute;
   background-color: white;
@@ -113,6 +118,7 @@ body {
 
 .heart__full .fa-heart {
   background: linear-gradient(170deg, #ff79da, #9356dc);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -141,11 +147,28 @@ body {
   transition: 1.5s;
 }
 
-.btn__order {
+.btn__primary {
+  border-radius: 2rem;
+  border: none;
+  background: linear-gradient(170deg, #ff79da, #9356dc);
+  box-shadow: 0 0.8rem 1rem #cdcdcd;
+  color: white;
+  text-align: center;
+  font: 1rem "Roboto";
+  cursor: pointer;
+  padding: 1rem 1.7rem 1rem 1.7rem;
+}
+.btn__primary:hover {
+  box-shadow: 0 0.2rem 0.3rem grey;
+  transition: 0.5s;
+}
+.btn__primary:focus {
+  outline: none;
+}
+
+.btn__secondary {
   display: flex;
   justify-content: center;
-}
-.btn__order .btn__secondary {
   border-radius: 2rem;
   border: none;
   background: linear-gradient(170deg, #ff79da, #9356dc);
@@ -155,13 +178,14 @@ body {
   font: 1rem "Roboto";
   cursor: pointer;
   padding: 1rem 3rem 1rem 3rem;
-  margin: 3rem 0 3rem 0;
+  width: 4rem;
+  margin: 3rem auto 3rem auto;
 }
-.btn__order .btn__secondary:hover {
+.btn__secondary:hover {
   box-shadow: 0 0.2rem 0.3rem grey;
   transition: 0.5s;
 }
-.btn__order .btn__secondary:focus {
+.btn__secondary:focus {
   outline: none;
 }
 
@@ -217,20 +241,21 @@ footer .footer__link {
   margin-bottom: 0.5rem;
 }
 
-.location {
-  box-shadow: inset 0 0.2rem 0.2rem #d9d9d9;
+.location__band {
   display: flex;
+  align-items: center;
   justify-content: center;
+  box-shadow: inset 0 0.2rem 0.2rem #d9d9d9;
   background-color: #ebebeb;
   width: 100%;
   height: 3.3rem;
 }
-.location__icon {
-  padding: 1rem 1rem 0 0;
+.location__band .location__icon {
+  margin-right: 1rem;
 }
-.location__title {
-  padding-top: 1rem;
-  font-weight: 500;
+.location__band .location__title {
+  font-weight: 600;
+  color: #4d4d4d;
 }
 
 .intro {
@@ -253,26 +278,7 @@ footer .footer__link {
   margin: 1rem 0 2rem 0;
 }
 
-.btn__primary {
-  border-radius: 2rem;
-  border: none;
-  background: linear-gradient(170deg, #ff79da, #9356dc);
-  box-shadow: 0 0.8rem 1rem #cdcdcd;
-  color: white;
-  text-align: center;
-  font: 1rem "Roboto";
-  cursor: pointer;
-  padding: 1rem 1.7rem 1rem 1.7rem;
-}
-.btn__primary:hover {
-  box-shadow: 0 0.2rem 0.3rem grey;
-  transition: 0.5s;
-}
-.btn__primary:focus {
-  outline: none;
-}
-
-.aside__title {
+.howTo__title {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 3rem 1.5rem 2rem 1.5rem;
@@ -328,7 +334,7 @@ footer .footer__link {
 }
 
 @media screen and (min-width: 768px) {
-  .aside__title {
+  .howTo__title {
     display: flex;
     justify-content: center;
   }
@@ -439,16 +445,17 @@ footer .footer__link {
     flex-wrap: wrap;
     justify-content: center;
   }
+
   .beside__title {
     width: 100rem;
     text-align: center;
   }
+
   .thumbnail {
     min-width: 25rem;
     max-width: 40%;
   }
 }
-
 .image__title {
   width: auto;
   height: 19rem;
@@ -580,7 +587,7 @@ footer .footer__link {
   }
 
   .menu-card {
-    min-width: 25rem;
+    min-width: 35rem;
   }
 }
 .check {
@@ -616,3 +623,4 @@ footer .footer__link {
   }
 }
 
+/*# sourceMappingURL=style.css.map */
