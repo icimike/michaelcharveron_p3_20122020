@@ -1,15 +1,18 @@
-.location {
-  box-shadow: inset 0 0.2rem 0.2rem lighten($color-bck, 35%);
-  display: flex;
-  justify-content: center;
-  background-color: lighten($color-bck, 42%);
-  width: 100%;
-  height: 3.3rem;
-  &__icon {
-    padding: 1rem 1rem 0 0;
-  }
-  &__title {
-    padding-top: 1rem;
-    font-weight: 500;
+.location { 
+    &__band {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 0.2rem 0.2rem lighten($color-bck, 35%);
+      background-color: lighten($color-bck, 42%);
+      width: 100%;
+      height: 3.3rem;
+    .location__icon {
+      margin-right: 1rem;
+    }
+    .location__title {
+      font-weight: 600;
+      color: darken($color-bck, 20%);
+    }
   }
 }

@@ -17,13 +17,8 @@
     margin: 1rem 0 2rem 0;
   }
 }
-  
-.btn__primary {
-  @include btn;
-  padding: 1rem 1.7rem 1rem 1.7rem;
-}
-  
-.aside__title {
+ 
+.howTo__title {
   @include title;
 }
   
@@ -76,7 +71,7 @@
 }
   
 @media screen and (min-width: 768px) {
-  .aside__title {
+  .howTo__title {
     display: flex;
     justify-content: center;
   }

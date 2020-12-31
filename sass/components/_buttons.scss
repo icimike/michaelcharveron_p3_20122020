@@ -1,9 +1,13 @@
-.btn__order {
+.btn__primary {
+  @include btn;
+  padding: 1rem 1.7rem 1rem 1.7rem;
+}
+
+.btn__secondary {
   display: flex;
   justify-content: center;
-  .btn__secondary {
-    @include btn;
-    padding: 1rem 3rem 1rem 3rem;
-    margin: 3rem 0 3rem 0;
-  }
+  @include btn;
+  padding: 1rem 3rem 1rem 3rem;
+  width: 4rem;
+  margin: 3rem auto 3rem auto;
 }
