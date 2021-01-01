@@ -118,7 +118,6 @@ figure {
 
 .heart__full .fa-heart {
   background: linear-gradient(170deg, #ff79da, #9356dc);
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
