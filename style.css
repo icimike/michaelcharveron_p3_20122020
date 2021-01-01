@@ -487,6 +487,7 @@ footer .footer__link {
 .menu__title .menu__resto {
   font-family: "Shrikhand", "Sans serif";
   font-size: 1.7rem;
+  font-weight: 500;
 }
 
 .menu-card {
